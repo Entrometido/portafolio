@@ -1,0 +1,169 @@
+/* Variables (oscuro por defecto) */
+:root {
+  --bg: #121212;
+  --text: #f4f4f4;
+  --accent: #ffdd57;
+  --card: #1e1e1e;
+  --muted: #ccc;
+}
+
+.light-mode {
+  --bg: #f9f9f9;
+  --text: #222;
+  --accent: #ff9800;
+  --card: #fff;
+  --muted: #555;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Header */
+header {
+  background: var(--card);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  color: var(--accent);
+}
+
+header a {
+  color: var(--text);
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+header a:hover {
+  color: var(--accent);
+}
+
+/* Botón dark/light */
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--accent);
+  transition: transform 0.2s ease;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.2);
+}
+
+/* Main */
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.formulario {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.formulario input,
+.formulario select,
+.formulario button {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.formulario button {
+  background: var(--accent);
+  border: none;
+  color: var(--bg);
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.formulario button:hover {
+  opacity: 0.9;
+}
+
+/* Tabla */
+.tablita table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.tablita th,
+.tablita td {
+  border: 1px solid #444;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.tablita th {
+  background: var(--card);
+  color: var(--accent);
+}
+
+.tablita td {
+  background: var(--bg);
+}
+
+/* Total */
+.total {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: right;
+  color: var(--accent);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--card);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ==== Iconos sociales ==== */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.social-icons .icon {
+  width: 45px;
+  height: 45px;
+  background: var(--card);
+  color: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.social-icons .icon:hover {
+  background: var(--accent);
+  color: #fff; /* icono blanco sobre fondo de acento */
+  transform: scale(1.1);
+}
+

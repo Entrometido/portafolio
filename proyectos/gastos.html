@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto: Lista de Gastos</title>
+  <link rel="stylesheet" href="/styles/gastos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Lista de Gastos</h1>
+      <div>
+        <a href="../index.html">⬅ Volver</a>
+        <button id="theme-toggle">🌙</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Formulario -->
+    <section class="formulario">
+      <input type="text" id="nombre-gasto" placeholder="Nombre del Gasto">
+      <input type="date" id="fecha">
+      <input type="number" id="valor-gasto" placeholder="Valor">
+      <select id="categoria-gasto">
+        <option value="">--Categoría--</option>
+        <option value="Comida">Comida</option>
+        <option value="Transporte">Transporte</option>
+        <option value="Ocio">Ocio</option>
+        <option value="Otros">Otros</option>
+      </select>
+      <button id="agregar-gasto">Agregar</button>
+    </section>
+
+    <!-- Tabla de gastos -->
+    <section class="tablita">
+      <table>
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Valor</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody id="lista-gasto"></tbody>
+      </table>
+    </section>
+
+    <!-- Total -->
+    <section class="total">
+      <h2>Total: <span id="total">-</span></h2>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 E. Portafolio</p>
+    <div class="social-icons">
+    <a href="mailto:jhsepe@hotmail.com" class="icon" title="Email">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <a href="https://linkedin.com/in/sebastián-a-8797111a5" target="_blank" class="icon" title="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/Entrometido" target="_blank" class="icon" title="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://discord.com/invite/entrometido" target="_blank" class="icon brands fab fa-discord"></a>
+  </div>
+  </footer>
+
+  <script src="gastos.js"></script>
+  <script src="/script.js"></script> <!-- mismo toggle que el portafolio -->
+</body>
+</html>
+
+

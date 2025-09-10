@@ -1,0 +1,313 @@
+/* ==== Reset ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==== Variables de color (oscuro por defecto) ==== */
+:root {
+  --bg: #121212;
+  --text: #f4f4f4;
+  --accent: #ffdd57;
+  --card: #1e1e1e;
+  --muted: #ccc;
+}
+
+/* ==== Tema claro ==== */
+.light-mode {
+  --bg: #f9f9f9;
+  --text: #222;
+  --accent: #ff9800;
+  --card: #fff;
+  --muted: #555;
+}
+
+/* ==== Estilos generales ==== */
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ==== Header & Navbar ==== */
+header {
+  background: var(--card);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+header a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+header a:hover {
+  color: var(--accent);
+}
+
+/* ==== Botón Dark/Light ==== */
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  color: var(--accent);
+  transition: transform 0.2s ease;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.2);
+}
+
+/* ==== Hero ==== */
+#hero {
+  text-align: center;
+  padding: 5rem 1rem;
+  background: linear-gradient(135deg, var(--card), #292929);
+}
+
+#hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+#hero p {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  color: var(--muted);
+}
+
+.hero-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  border: 3px solid var(--accent);
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: #ffc107;
+}
+
+/* ==== Secciones ==== */
+section {
+  padding: 3rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  text-align: center;
+}
+
+/* ==== Proyectos ==== */
+.grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.card p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.card a {
+  display: inline-block;
+  margin-right: 0.5rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* ==== Contacto ==== */
+#contacto p {
+  text-align: center;
+  color: var(--muted);
+}
+
+/* ==== Iconos sociales ==== */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.social-icons .icon {
+  width: 45px;
+  height: 45px;
+  background: var(--card);
+  color: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.social-icons .icon i {
+  pointer-events: none; /* asegura que el hover sea sobre el círculo, no el ícono */
+}
+
+.social-icons .icon:hover {
+  background: var(--accent);
+  color: #fff; /* ícono siempre blanco en hover */
+  transform: scale(1.1);
+}
+
+footer .social-icons .icon:hover i {
+  color: #fff !important; /* aseguramos contraste en todos los casos */
+}
+
+/* ==== Footer ==== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--card);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none; /* oculto por defecto */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+
+/* Back to top: hidden por defecto, aparece con .show */
+#back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: var(--accent);
+  color: var(--bg);
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  transform: translateY(120%);   /* fuera de pantalla */
+  opacity: 0;
+  transition: transform 0.28s cubic-bezier(.2,.9,.3,1), opacity 0.28s ease;
+  z-index: 9999;                 /* muy arriba para no quedar debajo */
+  outline: none;
+}
+
+/* cuando mostramos */
+#back-to-top.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* hover / foco accesible */
+#back-to-top:hover,
+#back-to-top:focus {
+  transform: translateY(0) scale(1.08);
+  opacity: 1;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.32);
+}
+
+/* tamaño más pequeño en pantallas pequeñas */
+@media (max-width: 420px) {
+  #back-to-top {
+    right: 16px;
+    bottom: 16px;
+    width: 44px;
+    height: 44px;
+    font-size: 1rem;
+  }
+}
+
+#cv {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cv-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
