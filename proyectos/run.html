@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Ritmos de Running</title>
+  <link rel="stylesheet" href="/styles/running.css">
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+    <nav>
+      <h1>Calculadora de Ritmos de Running 🏃</h1>
+      <div>
+        <a href="../index.html">⬅ Volver</a>
+        <button id="theme-toggle">🌙</button>
+      </div>
+    </nav>
+  </header>
+<main>
+    <section>  
+    <form id="calc-form" class="card">
+
+      <!-- Distancia -->
+      <div class="form-row">
+        <p>Introduce los datos; distancia. Tiempos de carrera, con eso obtendrás el ritmo (pace) por km</p>
+        <label for="distancia">Distancia (km):</label>
+        <input type="number" id="distancia" step="0.01" required>
+      </div>
+
+      <!-- Tiempo en una sola fila -->
+      <div class="form-row time-row">
+          <label for="horas">Tiempo:</label>
+        <div class="time-inputs">
+          <div class="time-field">
+            <input type="number" id="horas" min="0">
+            <small>Horas</small>
+          </div>
+        <div class="time-field">
+            <input type="number" id="minutos" min="0" max="59">
+            <small>Min</small>
+        </div>
+        <div class="time-field">
+            <input type="number" id="segundos" min="0" max="59">
+            <small>Seg</small>
+        </div>
+    </div>
+
+
+      <!-- Botones -->
+      <div class="form-actions">
+        <button type="button" class="btn" onclick="calcularRitmo()">Calcular</button>
+        <button type="reset" class="btn btn-secondary">Reset</button>
+      </div>
+    </form>
+
+    <div id="resultado" class="card"></div>
+  </section>
+</main>
+
+  <footer>
+    <p>© 2025 E. Portafolio</p>
+    <div class="social-icons">
+    <a href="mailto:jhsepe@hotmail.com" class="icon" title="Email">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <a href="https://linkedin.com/in/sebastián-a-8797111a5" target="_blank" class="icon" title="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/Entrometido" target="_blank" class="icon" title="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://discord.com/invite/entrometido" target="_blank" class="icon brands fab fa-discord"></a>
+  </div>
+  </footer>
+
+  <script src="/scripts/running.js"></script>
+  <script src="/scripts/script.js"></script> <!-- mismo toggle que el portafolio -->
+</body>
+</html>
